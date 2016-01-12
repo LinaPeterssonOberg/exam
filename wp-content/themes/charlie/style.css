@@ -1,0 +1,23 @@
+/*
+Theme Name: Charlie
+Author: Lina
+Version: 1.0
+Description: This is my charlie theme
+Text Domain: cha
+*/
+
+body {
+    background: red ;
+}
+
+body.custom-background {
+    background-size: cover;
+}
+
+.navbar-logo img {
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
