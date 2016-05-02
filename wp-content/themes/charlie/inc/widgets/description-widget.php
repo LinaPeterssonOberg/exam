@@ -17,39 +17,63 @@ class Description_Widget extends WP_Widget {
      //This function is responsible for the front-end display of the widget. It outputs the content of the widget
     public function widget ( $args, $instance ) {
 
-        //wordpress passes the widget() method two arguments,
-        // the first is $args which is an array detailing information
-        //about the widget. and the second is $instance which you can use to get the output the data associateed
-        //with the widget
+        ?>
+        <?php
 
-         extract( $args );
+        //$sidebars_widgets (array) An associative array of sidebars and their widgets.
+        global $sidebars_widgets;
+        global $class;
+        //Count the number of widgets in a sidebar
+        $count = count($sidebars_widgets['description-widget-sidebar']);
 
-        //before_widget
-        //(string) the text or HTML befor the widget.
-        //Default： <div class="widget {widget's classname}">
-
-        echo $before_widget;
+        switch ( $count ) {
+            case '1':
+                $class = 'col-md-12';
+                break;
+            case '2':
+                $class = 'col-md-6 col-sm-6';
+                break;
+            case '3':
+                $class = 'col-md-4 col-sm-12 col-xs-12 description-widget-extra';
+                break;
+            case '4':
+                $class = 'col-md-3 col-sm-12';
+                break;
+            default:
+                $class = 'col-md-4 col-sm-12';
+                break;
+        }
 
         ?>
+            <div class="description-widget <?php echo $class ?>">
 
-            <?php if( $description_head = @$instance[ 'description-head' ] ) : ?> <!-- @ gör så att vi kollar om $instance['title'] finns, som en if -->
+
+            <?php if ( ! empty( $instance['description_logo'] ) ) : ?>
+
+                <img src="<?php echo esc_url( $instance['description_logo'] ); ?>" alt="<?php if ( ! empty( $instance['title']) ) echo $instance['title']; ?>">
+
+            <?php endif ?>
+
+            <?php if( $description_head = @$instance[ 'description-head' ] ) : ?> <!-- @ gör så att vi kollar om $instance['description-head'] finns, som en if -->
                 <div class="description-widget-title"><h2><?php echo $description_head; ?></h2></div>
             <?php endif; ?>
+
+            <div class="description-seperator"></div>
 
             <?php if( $description_textarea = @$instance[ 'description-textarea' ] ) : ?>
                 <div class="description-widget-textarea"><p><?php echo $description_textarea; ?></p></div>
             <?php endif; ?>
 
-        <?php
+            </div>
 
-        echo $after_widget;
+        <?php
 
     }
 
     public function update ( $new_instance, $old_instance ) {
 
         $instance = $old_instance;
-        //$instance['description_logo'] = esc_url_raw( $new_instance['description_logo'] );
+        $instance['description_logo'] = esc_url_raw( $new_instance['description_logo'] );
         $instance['description-head'] = strip_tags( $new_instance['description-head'] );
         $instance['description-textarea'] = strip_tags( $new_instance['description-textarea'] );
 
@@ -60,19 +84,19 @@ class Description_Widget extends WP_Widget {
 
 
     }
-
     //The form() method/function is used to define the back-end widget form
     // –which you see in the widgets panel in the dashboard
-    //  This form enables a user to set up the title and other options for the widget.
+    //  This form enables a user to set up the logo and title and textarea and other options for the widget.
     //This function takes the following parameter(s):
     //$instance – Previously saved values from the database
+
 
     public function form ( $instance ) {
 
         ?>
 
         <p>
-            <label for"<?php echo $this->get_field_id( 'description_logo' ); ?>"><?php _e( 'Description Logo', 'cha' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'description_logo' ); ?>"><?php _e( 'Description Logo', 'cha' ); ?></label>
              <span class="image-container">
                  <?php if (! empty( $instance['description_logo'] ) ) : ?>
                      <img src="<?php echo $instance['description_logo']; ?>" style="max-width: 100%; margin: 5px 0; display: block">
@@ -94,9 +118,6 @@ class Description_Widget extends WP_Widget {
         <?php
 
     }
-
-
-
 }
 
 
