@@ -1,31 +1,28 @@
 <?php get_header(); ?>
-
-<div class="first-content container">
-    <div class="row">
-        <div class="col-md-12">
+<div class="container-fluid">
+<div class="row first-content">
+        <div class="col-sm-12 col-md-12">
             <div class="image-text">
-                    <?php if ( $head_subtitle1 = get_theme_mod( 'cha_head5_options_title' ) ) : ?>
-                        <div class="image-subtitle"><?php echo $head_subtitle1; ?></div>
-                    <?php endif; ?>
-            <div class="image-text-border">
+                <?php if ( $head_subtitle1 = get_theme_mod( 'cha_head5_options_title' ) ) : ?>
+                    <div class="image-subtitle"><?php echo $head_subtitle1; ?></div>
+                <?php endif; ?>
 
+            <div class="image-text-border">
                 <?php if ( $head_subtitle = get_theme_mod( 'cha1_head_options_title') ) : ?>
                     <div class="image-header"><?php echo $head_subtitle; ?></div>
                 <?php endif; ?>
-
             </div>
+
                 <?php if ( $head_subtitle = get_theme_mod( 'cha1_head_options_subtitle' ) ) : ?>
                     <div class="image-subtitle"><?php echo $head_subtitle; ?></div>
                 <?php endif; ?>
 
             </div>
         </div>
-    </div>
 </div>
 
-<div class="second-content">
-    <div class="row">
-        <div class="col-md-6 col-sm-12 service-widget-left-sidebar">
+<div class="row second-content">
+        <div class="col-sm-12 col-md-6 service-widget-left-sidebar">
             <?php if ( is_active_sidebar('service-widget-left-sidebar') ) :
 
                 dynamic_sidebar('service-widget-left-sidebar');
@@ -37,7 +34,7 @@
             endif;
             ?>
         </div>
-        <div class="col-md-6 col-sm-12 service-widget-right-sidebar">
+        <div class="col-sm-12 col-md-6 service-widget-right-sidebar">
 
             <?php if ( is_active_sidebar('service-widget-right-sidebar') ) :
 
@@ -52,13 +49,10 @@
             ?>
 
         </div>
-    </div>
 </div>
 
-<div class="third-content">
-    <div class="row third-content-widget">
-
-        <div class="col-md-8 col-sm-12 col-md-offset-2">
+<div class="row third-content">
+        <div class="col-sm-12 col-md-8 col-md-offset-2 third-content-widget">
 
             <?php if ( is_active_sidebar('text-widget-sidebar') ) :
 
@@ -72,11 +66,10 @@
             ?>
 
         </div>
-    </div>
 </div>
 
-<div class="fourth-content">
-    <div class="row description-row">
+<div class="row fourth-content">
+    <div class="description-row">
 
         <?php if( is_active_sidebar( 'description-widget-sidebar' ) ) :
 
@@ -91,6 +84,7 @@
         ?>
 
     </div>
+</div>
 </div>
 
 

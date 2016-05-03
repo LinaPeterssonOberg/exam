@@ -9,13 +9,15 @@ Text Domain: cha
 /* ------------------------------------
 GLOBALS
 ---------------------------------------*/
-body p h1 h2 h3 h4 h5 h6 {
+body {
+    padding-top: 65px;
+}
 
-    font-family: PlantinStd,Helvetica,Arial,sans-serif
+p, h1, h2, h3, h4, h5, h6{
+    font-family: "PlantinStd", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-
     font-weight: 100;
 }
 
@@ -41,66 +43,39 @@ body.custom-background {
     position: relative;
 }
 
-.overlay {
-    background-color:rgba(33,40,45,0.8);
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    height: 100%;
-    width: 100%;
-}
 
 /* ------------------------------------
+
 NAVBARS
+
 ---------------------------------------*/
 
-.navbar .nav,
-.navbar .nav > li {
-    float:none;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-    *zoom:1; /* hasLayout ie7 trigger */
-    vertical-align: top;
-}
+/*------MENU-------*/
 
-.navbar-inner {
-    text-align:center;
+.image-header-logo{
+    height: 40px;
+    margin: 5px;
 }
-
-.navbar {
-    border-radius: 0px;
+.navbar-default{
+    background-color: #95a5a6;
     border: none;
-    background: #95A5A6;
-}
-
-.navbar-default .navbar-nav li a:hover,
-.navbar-default .navbar-nav li a:active,
-.navbar-default .navbar-nav li a:focus {
-    background: #fff;
-}
-
-.navbar-brand,
-.navbar-default .navbar-nav li a {
-    line-height: 76px;
-    height: 76px;
-    padding-top: 0;
-    text-transform: uppercase;
 }
 
 .navbar-default .navbar-nav>li>a {
-    font-size: 18px;
-    color: white;
+    color: #fff;
+    text-transform: uppercase;
     letter-spacing: 2px;
-    height: 76px;
 }
 
-/*------MENU-------*/
-.navbar-logo img {
-    height: 30px;
-    margin-top: 23px;
+.navbar-nav>li:hover{
+    background: white;
 }
+
+/* ------------------------------------
+
+FIRST CONTENT
+
+---------------------------------------*/
 
 .first-content {
     height: 500px;
@@ -128,26 +103,77 @@ NAVBARS
     font-size: 50px;
 }
 
-/*------DESCRIPTION SIDEBAR-------*/
+/* ------------------------------------
+
+SECONT CONTENT
+
+---------------------------------------*/
+
+
+.second-content {
+    background: #fff;
+    padding: 80px 80px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.service-widget-left-sidebar, .service-widget-right-sidebar, .textwidget {
+    font-weight: 200;
+}
+
+
+/* ------------------------------------
+
+THIRD CONTENT
+
+---------------------------------------*/
+
+.third-content {
+    background-color: #95A5A6;
+    padding: 80px 80px;
+    text-align: center;
+    font-size: 26px;
+    color: white;
+    line-height: 34px;
+}
+
+.third-content-widget {
+    text-shadow: 0.2px 0.2px 0.2px #333;
+    font-weight: 100;
+}
+
+.third-content h2 {
+    color: white;
+}
+
+/* ------------------------------------
+
+FOURTH CONTENT
+
+---------------------------------------*/
+
 .fourth-content {
     background-color: #fff;
     padding: 40px 40px;
 }
 
-/*------DESCRIPTION WIDGET-------*/
+.fourth-content h2 {
+    padding-bottom: 20px;
+    font-weight: 200;
+
+}
+
 
 .description-widget {
     background: #fff;
     padding: 80px 80px;
     text-align: center;
-    font-family: PlantinStd,Helvetica,Arial,sans-serif;
     font-weight: 200;
     font-size: 20px;
 }
 
 .description-widget-title h2 {
     padding: 5px 10px;
-    /*font-size: 25px;*/
     font-weight: 200;
 }
 
@@ -170,72 +196,16 @@ NAVBARS
     text-align: center;
 }
 
-
-/* THIRD CONTENT */
-
-.third-content {
-    /*background-color: darkseagreen;*/
-    /*background-color: #CBDBD8;*/
-    background-color: #95A5A6;
-    padding: 80px 80px;
-    text-align: center;
-    font-size: 26px;
-    color: white;
-    line-height: 34px;
-}
-
-.third-content-widget {
-    text-shadow: 0.2px 0.2px 0.2px #333;
-    font-weight: 100;
-}
-
-.third-content h2 {
-    /*font-size: 50px;*/
-    color: white;
-}
 /* TITLE AND TEXT CONTENT*/
 .title-text-widget-sidebar {
     background-color: #95A5A6;
 }
 
-/*FOURTH CONTENT*/
+/* ------------------------------------
 
-.second-content {
-    background: #fff;
-    padding: 80px 80px;
-    text-align: center;
-    font-size: 20px;
-    font-family: PlantinStd,Helvetica,Arial,sans-serif;
-}
+FOOTER
+---------------------------------------*/
 
-.fourth-content h2 {
-    padding-bottom: 20px;
-    font-weight: 200;
-
-}
-
-.service-widget-left-sidebar .textwidget {
-    font-weight: 200;
-}
-
-.service-widget-right-sidebar .textwidget {
-    font-weight: 200;
-}
-
-/* FIFTH CONTENT */
-.fifth-content {
-    background-color: snow;
-    padding: 100px 100px;
-}
-
-.contact-widget {
-    font-size: 12px;
-    color: dimgrey;
-    font-family: PlantinStd,Helvetica,Arial,sans-serif;
-    color: dimgrey;
-}
-
-/* FOOTER */
 .footer-content {
     background-color: #95A5A6;
     color: #DADADA;
@@ -247,6 +217,7 @@ NAVBARS
     padding-top: 25px;
 }
 
+
 .footer-info {
     text-align: center;
 }
@@ -257,35 +228,23 @@ NAVBARS
 
 .footer-info a {
     color: #fff;
-    margin: 0 5px;
     display: block;
     font-weight: 100;
 }
 
 .footer-info p {
     color: #fff;
-    margin: 0 5px;
     display: block;
-    font-weight: 100;
     letter-spacing: 1px;
     font-size: 18px;
+    font-weight: 100;
 }
 
 .footer-info-mail {
     display: inline-block;
     margin: 0 5px;
 }
-/*
-.social-widget {
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 15px;
-}
 
-*/
-.employees-post img {
-    border-radius: 100%;
-}
 /* SOCIAL ICONS FOOTER*/
 footer {
     background: #fff;
@@ -319,16 +278,20 @@ footer {
     display: inline-block;
 }
 
-/* FULL WIDTH PAGE */
+/* ------------------------------------
+
+FULL WIDTH WITH IMAGE TEMPLATE PART
+---------------------------------------*/
 .full-width-image {
-    margin-top: -20px;
+    margin-top: -47px;
     padding: 0;
     height: 300px;
+    overflow: hidden;
 }
 
 .full-width-image img {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
 }
 
 .full-width-wrapper-content {
@@ -360,14 +323,11 @@ footer {
     text-align: center;
 }
 
-/*CONTACT US PAGE TEMPLATE*/
 
-#map_canvas {
-    height: 100%;
-    width: 100%;
-    border: 1px solid red;
-}
+/* ------------------------------------
 
+CONTACT US TEMPLATE
+---------------------------------------*/
 
 .company-contact-content p {
     font-size: 15px;
@@ -385,11 +345,6 @@ footer {
 }
 
 /*CONTACT COMPANY DETAILS CUSTOMIZER  */
-
-.contact-company-logo {
-    height: 60px;
-    width: 60px;
-}
 
 .contact-header {
     text-align: center;
@@ -417,15 +372,13 @@ footer {
 }
 
 .contact-us-widget img {
-    height: 85px;
-    width: 85px;
+    height: 120px;
     border-radius: 100%;
 }
 
 .contact-number-widget {
     padding-bottom: 20px;
 }
-
 
 .btn-black {
     color: #fff;
@@ -443,25 +396,25 @@ a {
     text-decoration: none;
 }
 
-/* PROJECTS */
+/* ------------------------------------
+
+PROJECTS POST TYPES
+
+---------------------------------------*/
+
 .projects-post-wrapper{
     text-align: center;
     padding: 40px;
 }
 
 .projects-header-content h1 {
-    line-height: 58px;
     letter-spacing: 5px;
-    font-weight: 300;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
     padding: 40px 40px;
 }
 
 .projects-header-content p {
    font: italic 24px/32px 'Georgia', sans-serif;
    color: #95A5A6;
-   line-height: 130%;
 }
 
 .post-types-projects-wrapper {
@@ -535,7 +488,6 @@ Sidebar
 #searchsubmit {
     display: block;
     width: 56px;
-    /*height: 46px;*/
     position: absolute;
     top: 0;
     right: 0;
@@ -550,7 +502,6 @@ Sidebar
 .content-none-search {
     display: block;
     width: 56px;
-    /*height: 46px;*/
     position: absolute;
     top: 89px;
     right: 0;
@@ -562,7 +513,10 @@ Sidebar
     text-indent: -99999999px;
 }
 
-/* WOOCOMMERCE STYLE*/
+/* ------------------------------------
+
+WOOCOMMERCE STYLE
+---------------------------------------*/
 
 /* SHOP PAGE */
 
@@ -588,6 +542,7 @@ img.woocommerce-placeholder.wp-post-image {
     text-align: center;
     font-weight: 200;
     font-size: 60px;
+    padding-top: 50px;
 }
 
 .product-info {
@@ -683,7 +638,7 @@ select {
     padding: 1.2em .6em .3em;
 }
 
-/* grouped product button */
+/* Grouped product button */
 
 a.button.product_type_grouped {
     background: #95A5A6;
