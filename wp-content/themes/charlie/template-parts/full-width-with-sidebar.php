@@ -13,7 +13,7 @@
      </div>
 
     <div class="row full-width-wrapper-content">
-        <div class="col-md-9">
+        <div class="col-sm-12 col-md-9">
 
             <?php the_title( '<h1 class="full-width-title">', '</h1>' ); ?>
 
@@ -30,7 +30,7 @@
             </div>
 
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-12 col-md-3">
 
             <?php get_sidebar(); ?>
 
