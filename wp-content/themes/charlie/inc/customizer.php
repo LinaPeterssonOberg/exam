@@ -28,7 +28,10 @@ function cha_customize_register( $wp_customize ) {
 
     //SETTING ADD CONTROL
     $wp_customize->add_setting( 'cha_head_options_logo', array(
-        'sanitize_callback' => 'esc_url_raw') );
+        'sanitize_callback' => 'esc_url_raw',
+        'default' => get_template_directory_uri() . '/assets/images/logo.png',
+
+    ) );
     $wp_customize->add_control(new WP_Customize_Image_Control(
         $wp_customize,
         'cha_head_options_logo',

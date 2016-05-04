@@ -7,7 +7,8 @@
             <?php wp_head(); ?>
 
     </head>
-        <body <?php if (is_front_page() ) body_class(); ?> >
+
+    <body <?php if (is_front_page() ) body_class(); ?> >
 
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -35,6 +36,15 @@
 
                 </div>
         </nav>
+
+
+
+
+
+
+
+
+
 
 
 
