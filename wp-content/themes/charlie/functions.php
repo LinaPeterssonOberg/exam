@@ -24,6 +24,7 @@ add_theme_support('custom-background',
     )
 );
 
+/* WOOCOMMERCE */
 
 add_action( 'after_setup_theme', 'cha_after_setup_theme' );
 function woocommerce_support() {
@@ -31,7 +32,6 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
-/* WOOCOMMERCE */
 add_action( 'after_setup_theme', 'woocommerce_support' );
 
 /* remove breadcrumbs Home/Shop */
@@ -54,6 +54,7 @@ function cha_woo_remove_reviews_tab($tabs) {
 // Display 12 products per page.
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
 
+/* Sidebars */
 function cha_widgets_init() {
 
     register_sidebar(array(

@@ -69,28 +69,26 @@ NAVBARS
     top: 0;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a, .navbar-nav ul li a{
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 50px;
     height: 85px;
 }
+.navbar-nav{
+    margin-top:10px;
+}
+.navbar-nav ul li{
+    list-style-type: none;
+    display: inline-block;
+}
 
 .navbar-nav>li:hover{
     background: white;
 }
 
-.navbar-default li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 20px;
-    color: #fff;
-}
 
-.navbar-default a {
-    color: #fff;
-}
 /* ------------------------------------
 
 FIRST CONTENT
@@ -886,6 +884,9 @@ form input {
 .woocommerce form .form-row.woocommerce-validated .select2-container, .woocommerce form .form-row.woocommerce-validated input.input-text, .woocommerce form .form-row.woocommerce-validated select {
     border-color: black;
 }
+
+
+
 
 
 

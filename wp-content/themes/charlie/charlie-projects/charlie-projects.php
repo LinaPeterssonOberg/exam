@@ -1,17 +1,10 @@
 <?php
-/*
-Plugin Name: Charlie Projects Plugin
-Author: Lina P Öberg
-Version: 1.0
-Text Domain: cha
-Description: Page where you can show your skills and projects your company delivered, its your Companys portfolio page.
-*/
 
 add_action( 'init', 'cha_projects_init' );
 /**
  *
  * Register a projects post type
- * where you can add profile pic, name and description of each employeer
+ * where you can add image,title and description of each projects or other content you want display as posttype
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */

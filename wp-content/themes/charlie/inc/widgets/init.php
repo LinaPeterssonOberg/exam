@@ -16,18 +16,14 @@
      */
 //Description widget
 require get_template_directory() . '/inc/widgets/description-widget.php';
-require get_template_directory() . '/inc/widgets/social-widget.php';
 require get_template_directory() . '/inc/widgets/contact-us-widget.php';
-require get_template_directory() . '/inc/widgets/contact-us-adress.php';
 
 
 
 function cha_register_widgets_init() {
 
     register_widget( 'Description_Widget' );
-    /*register_widget( 'Social_Links_Widget' );*/
     register_widget( 'Contact_Us_Widget' );
-    register_widget( 'Contact_Us_Adress' );
 
 
     $sidebars = array(
