@@ -1,6 +1,5 @@
 <?php
 
-add_action( 'init', 'cha_projects_init' );
 /**
  *
  * Register a projects post type
@@ -8,6 +7,7 @@ add_action( 'init', 'cha_projects_init' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */
+add_action( 'init', 'cha_projects_init' );
 function cha_projects_init() {
     $labels = array(
         'name'               => _x( 'Projects', 'post type general name', 'cha' ),

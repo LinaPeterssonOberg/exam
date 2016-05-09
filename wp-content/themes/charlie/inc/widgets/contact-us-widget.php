@@ -103,9 +103,6 @@ class Contact_Us_Widget extends WP_Widget {
 
     public function form ( $instance ) {
 
-        /* Set up some default widget settings. */
-       // $defaults = array( 'contact-name' => 'Your Name', 'job-description' => 'Where do you work', 'contact-number' => 'Your phone number', 'contact-email' => 'Your e-mail' );
-        //$instance = wp_parse_args( (array) $instance, $defaults );
 
         ?>
         <p>

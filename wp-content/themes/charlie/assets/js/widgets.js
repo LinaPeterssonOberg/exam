@@ -5,7 +5,7 @@
      $( document ).on ( 'click', '.upload-media-button', function( event ) {
 
          event.preventDefault();
-         //knappen
+         //button
          var self = $( this),
          //find the siblings, don´t want to select all others
              imageContainer = self.siblings( '.image-container' ),
